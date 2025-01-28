@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ex 5</title>
+      <style>
+            .hightlight {
+                  background-color: yellow;
+            }
+      </style>
+</head>
+<body>
+      <h2>การจัดการ DOM</h2>
+      <p id="text">นี่คือข้อความตัวอย่าง!!</p>
+
+      <button onclick="ChangeMessage()">เปลี่ยนข้อความ</button>
+      <button onclick="HLMessage()">เน้นข้อความ</button><br><br>
+
+      <script>
+            function ChangeMessage() {
+                  let textElement = document.getElementById("text");
+                  textElement.textContent = "ข้อความถูกเปลี่ยนแล้ว";
+            }
+
+            function HLMessage() {
+                  let textElement = document.getElementById("text");
+                  textElement.classList.toggle("hightlight");
+            }
+
+            
+      </script>
+</body>
+</html>
