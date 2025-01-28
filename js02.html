@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ex 2</title>
+</head>
+<body>
+      <input type="text" id="name" placeholder="ใส่ชื่อของคุณ">
+      <button onclick="greetUser()">ทักทาย</button>
+      <p id="greetings"></p>
+
+      <script>
+            function greetUser() {
+                  let name = document.getElementById("name").value;
+                  if (name === "") {
+                        alert("กรุณาใส่ชื่อของคุณ");
+                  } else {
+                        document.getElementById("greetings").innerHTML = "สวัสดี " + name;
+                  }
+            }
+      </script>
+</body>
+</html>
