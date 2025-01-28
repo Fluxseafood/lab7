@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ex 7</title>
+</head>
+<body>
+      <h3>ข้อมูลนักเรียน</h3>
+      <button onclick="showInfo()">แสดงข้อมูล</button>
+      <button onclick="clearInfo()">ล้างข้อมูล</button>
+      <p id="studentInfo"></p>
+      <script>
+            const students = {
+                  name : 'John',
+                  age : 18,
+                  grade : 'M.6',
+                  scores :{
+                        math: 80,
+                        science: 75,
+                        english: 90
+                  }
+            };
+
+            function showInfo() {
+                  let info = document.getElementById('studentInfo');
+                  info.innerHTML = `ชื่อ: ${students.name} <br> 
+                  อายุ: ${students.age} <br> 
+                  ระดับชั้น: ${students.grade} <br> 
+                  คะแนน <br> 
+                  คณิตศาสตร์: ${students.scores.math} <br> 
+                  วิทยาศาสตร์: ${students.scores.science} <br> 
+                  ภาษาอังกฤษ: ${students.scores.english}`;
+            }
+
+            function clearInfo() {
+                  let info = document.getElementById('studentInfo');
+                  info.innerHTML = '';
+            }
+      </script>
+</body>
+</html>
