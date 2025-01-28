@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ex 4</title>
+</head>
+<body>
+      <h3>รายการสินค้า</h3>
+      <button onclick="showList()">แสดงรายการสินค้า</button>
+      <button onclick="clearList()">รีเซ็ต</button>
+      <ul id="productList"></ul>
+
+      <script>
+            function showList() {
+                  let product = ["Apple", "Banana", "Orange", "Pineapple", "Grapes"];
+                  let productElement = document.getElementById("productList");
+                  // ต้อง remove ก่อน
+                  productElement.innerHTML = "";
+
+                  for (let i = 0; i < product.length; i++) {
+                        let li = document.createElement("li");
+                        li.textContent = product[i];
+                        productElement.appendChild(li);
+                  }
+            }
+
+            function clearList() {
+                  let productElement = document.getElementById("productList");
+                  productElement.innerHTML = "";
+            }
+      </script>
+</body>
+</html>
